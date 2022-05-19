@@ -10,6 +10,8 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/plugin-transform-modules-commonjs": "^7.17.9",
+		"@types/jest": "^27.5.1",
 		"eslint": "^8.15.0",
 		"eslint-config-prettier": "^8.5.0",
 		"husky": "^8.0.1",
@@ -20,5 +22,21 @@
 		"singleQuote": true,
 		"useTabs": true,
 		"endOfLine": "lf"
+	},
+	"babel": {
+		"env": {
+			"test": {
+				"plugins": [
+					"@babel/plugin-transform-modules-commonjs"
+				]
+			}
+		}
+	},
+	"jsconfig": {
+		"typeAcquisition": {
+			"include": [
+				"jest"
+			]
+		}
 	}
 }
