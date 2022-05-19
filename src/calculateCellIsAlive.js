@@ -1,4 +1,4 @@
-export const isAlive = (isAlive, aliveAdjacentCount) => {
+export const calculateCellIsAlive = (isAlive, aliveAdjacentCount) => {
 	if (isAlive) {
 		return aliveAdjacentCount >= 2 && aliveAdjacentCount <= 3;
 	} else {
