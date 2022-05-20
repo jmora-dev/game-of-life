@@ -1,5 +1,5 @@
 import { adjacentPositionsSpherical } from './adjacentPositionsSpherical.js';
-import { calculateCellIsAlive } from './calculateCellIsAlive.js';
+import { calculateIfCellIsAlive } from './calculateIfCellIsAlive.js';
 
 export const updateMatrixCells = (matrix) => {
 	return matrix.map((row, y) => {
@@ -13,7 +13,7 @@ export const updateMatrixCells = (matrix) => {
 			const adjacentAliveCount = adjacentPos.filter(
 				(pos) => matrix[pos[1]][pos[0]] === true
 			).length;
-			return calculateCellIsAlive(isAlive, adjacentAliveCount);
+			return calculateIfCellIsAlive(isAlive, adjacentAliveCount);
 		});
 	});
 };
